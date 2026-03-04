@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Z20.com</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            color: white;
+            overflow-x: hidden;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px 8%;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        .logo span {
+            color: #00f7ff;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+            font-weight: 400;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #00f7ff;
+        }
+
+        .hero {
+            height: 90vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            animation: fadeUp 1.5s ease-in-out;
+        }
+
+        .hero h1 {
+            font-size: 50px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            max-width: 600px;
+            opacity: 0.9;
+        }
+
+        .btns {
+            margin-top: 30px;
+        }
+
+        .btn {
+            padding: 12px 25px;
+            border-radius: 30px;
+            border: none;
+            cursor: pointer;
+            margin: 10px;
+            font-weight: 600;
+            transition: 0.4s;
+        }
+
+        .btn-primary {
+            background: #00f7ff;
+            color: black;
+        }
+
+        .btn-primary:hover {
+            background: white;
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid #00f7ff;
+            color: #00f7ff;
+        }
+
+        .btn-outline:hover {
+            background: #00f7ff;
+            color: black;
+        }
+
+        .section {
+            padding: 80px 8%;
+            text-align: center;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 30px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            max-width: 700px;
+            margin: 40px auto;
+            transition: 0.4s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .social a {
+            display: inline-block;
+            margin: 15px;
+            font-size: 20px;
+            text-decoration: none;
+            color: white;
+            transition: 0.3s;
+        }
+
+        .social a:hover {
+            color: #00f7ff;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            opacity: 0.7;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">Z<span>20</span></div>
+        <nav>
+            <a href="#about">About Me</a>
+            <a href="#contact">Communication</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Hello, I'm Zamir 👋</h1>
+        <p>I am a self-improving individual with a passion for technology and software. I enjoy creating modern projects
+            and designing.</p>
+        <div class="btns">
+            <button class="btn btn-primary" onclick="scrollToSection('about')">More Information</button>
+            <button class="btn btn-outline" onclick="scrollToSection('contact')">Communication</button>
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <h2>About Me</h2>
+        <div class="card">
+            <p>
+                Buraya kendi kısa CV bilgini yazacaksın.
+                Örneğin:
+                <br><br>
+                • University: Tbilisi State University (TSU)
+                <br>
+                • Faculty: Computer Science
+                <br>
+                • Skills: Html, Css, Web Design
+                <br>
+                • Goal: To Improve Myself In The Field Of Software Development.
+            </p>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <h2>Communication</h2>
+        <div class="social">
+            <a href="https://instagram.com/novruzovii_00" target="_blank">Instagram</a>
+            <a href="https://wa.me/+995568713613" target="_blank">WhatsApp</a>
+        </div>
+    </section>
+
+    <footer>
+        © 2026 Z20.com | Tüm Hakları Saklıdır
+    </footer>
+
+    <script>
+        function scrollToSection(id) {
+            document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+        }
+    </script>
+
+</body>
+
+</html>
